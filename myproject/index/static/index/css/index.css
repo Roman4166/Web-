@@ -1,0 +1,123 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-card {
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: #2b2d42;
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.city-input {
+    padding: 0.8rem;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.city-input:focus {
+    outline: none;
+    border-color: #4361ee;
+}
+
+.submit-btn {
+    background: #4361ee;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #3a0ca3;
+}
+
+
+
+.weather-container {
+            
+            max-width: 570px;
+            margin: 10px auto 0px auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .weather-header {
+
+            background: var(--primary);
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .weather-header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .location-info {
+            
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 1.5rem;
+            background: var(--light);
+            border-bottom: 1px solid #e9ecef;
+            gap: 1rem;
+        }
+        
+        .info-card {
+            text-align: center;
+            padding: 1rem;
+            min-width: 120px;
+        }
+        
+        .info-card h3 {
+            
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .weather-block {
+            
+            border: 1px solid #ccc;       /* серая рамка толщиной 1px */
+            border-radius: 8px;           /* скругленные углы */
+            padding: 15px;                /* отступы внутри блока */
+            margin: 10px 0;               /* отступы снаружи блока */
+            width: fit-content;           /* ширина по содержимому */
+            background-color: #f9f9f9;    /* светлый фон */
+        }
+        .hourly-forecast{
+            margin-left: 35px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }

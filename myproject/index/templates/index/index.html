@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прогноз погоды</title>
+    <link rel="stylesheet" href="{% static 'index/css/index.css' %}">
+</head>
+<body>
+    <div class="weather-card">
+        <h1>Прогноз погоды</h1>
+        
+        <form method="GET">
+            <input 
+                type="text" 
+                name="city" 
+                placeholder="Введите город" 
+                
+                required
+                class="city-input"
+            >
+            <button type="submit" class="submit-btn">
+                Узнать погоду
+            </button>
+        </form>
+    </div>
+
+    
+    {% if city %}
+    <div class="weather-container">
+        <div class="weather-header">
+            <h1>Прогноз погоды</h1>
+            <p>Подробный почасовой прогноз на 5 дней для {{ city }}</p>
+        </div>
+            
+        <div class="location-info">
+            <div class="info-card">
+                <h3>Время</h3>
+                <p>{{ time }}</p>
+            </div>
+            <div class="info-card">
+                <h3>Температура</h3>
+                <p>{{ temperature}} {{ weather.hourly_units.temperature_2m.0 }}С</p>
+            </div>
+            <div class="info-card">
+                <h3>Облачность </h3>
+                <p>{{ cloud }}% </p>
+            </div>
+            <div class="info-card">
+                <h3>Часовой пояс</h3>
+                <p>{{ weather.timezone }} ({{ weather.timezone_abbreviation }})</p>
+            </div>
+        </div>
+            
+        <div class="hourly-forecast">
+            <h2>Почасовой прогноз температуры на 7 дней</h2>
+            
+            {%for i,b in list_temperatyre_value%}    
+                
+                
+                    <div class="weather-block">
+                        <p>{{i}}</p>
+                        <p>{{b}} {{ weather.hourly_units.temperature_2m.0 }}С</p>
+                    </div>
+                
+            {%endfor%}
+        </div>
+    </div>
+    {% endif %}
+
+</body>
+</html>
